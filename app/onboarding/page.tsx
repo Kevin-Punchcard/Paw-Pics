@@ -173,7 +173,7 @@ function Onboarding() {
     ];
 
     return (
-        <div className='flex flex-grow w-full bg-light'>
+        <div className='flex flex-grow w-full bg-light -mt-4'>
             <div className="w-1/2 p-8">
                 <div className='mb-4'>
                     <ul className="steps">
@@ -194,7 +194,7 @@ function Onboarding() {
                 </form>
             </div>
             <div className="relative w-1/2 bg-onboarding">
-                <div className="absolute bottom-0 w-full">
+                <div className="absolute bottom-[-10] w-full">
                     <Image
                         src={"/images/cat-onboarding.png"}
                         layout="responsive"
