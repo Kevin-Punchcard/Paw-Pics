@@ -1,26 +1,34 @@
 "use client";
 
 import React, { useState } from 'react'
+import Image from 'next/image';
 
 export default function PawFiles() {
     const [loggedIn, setLoggedIn] = useState(false);
 
     return (
-        <div>
-            <div className="drawer lg:drawer-open">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col items-center justify-center">
-                    {/* Page content here */}
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
-                        Open drawer
-                    </label>
-                </div>
-                <div className="drawer-side">
-                    <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                        {/* Sidebar content here */}
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+        <div className='flex flex-row'>
+            <div className="drawer drawer-open">
+                <div className="h-[90vh] bg-light">
+                    <ul className="menu bg-light text-base-content w-70 p-4">
+                        <li>
+                            <a className='hover:bg-lightYellow'>
+                                <Image src={"/icons/person.svg"} height={20} width={20} alt="home-hero image" />
+                                Human Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a className='hover:bg-lightYellow'>
+                                <Image src={"/icons/heart-paw.svg"} height={20} width={20} alt="home-hero image" />
+                                My Pawfiles
+                            </a>
+                        </li>
+                        <li>
+                            <a className='hover:bg-lightYellow'>
+                                <Image src={"/icons/paw.svg"} height={20} width={20} alt="home-hero image" />
+                                Liked Paws
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>

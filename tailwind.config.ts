@@ -15,6 +15,8 @@ const config: Config = {
         beige: "#FCFAE1",
         peach: "#FCB888",
         mustard: "#EDB53E",
+        light: "#FFFEF3",
+        lightYellow: "#FFFCD6",
         foreground: "var(--foreground)",
       },
       fontSize: {
