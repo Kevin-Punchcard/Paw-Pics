@@ -2,11 +2,11 @@ import Card from '@/components/Card';
 import React from 'react';
 
 export default function Feed() {
-    const cardHeader = ["title 1", "title 2", "title 3"];
-    const cardBody = ["If a dog chews shoes whose shoes does he choose?", "body 2", "body 3"];
+    const cardHeader = ["Dog Name 1", "Dog Name 2", "Dog Name 3", "Dog Name 4", "Dog Name 245", "Dog Name 4564563"];
+    const cardBody = ["If a dog chews shoes whose shoes does he choose?", "Dog Card body 2", "Dog Card body 3"];
 
     return (
-        <>
+        <div className='flex flex-row gap-4 max-w-7xl flex-wrap justify-center'>
             {cardHeader.map((header, index) => (
                 <Card
                     key={index}  // Assign a unique key to each card
@@ -14,6 +14,6 @@ export default function Feed() {
                     body={cardBody[index]}  // Pass the respective body text
                 />
             ))}
-        </>
+        </div>
     );
 }
