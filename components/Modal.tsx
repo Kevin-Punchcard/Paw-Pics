@@ -68,7 +68,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           />
         </div>
 
-        {/* Added Action buttons */}
+        {/* Action buttons */}
         <div className="flex justify-end gap-2 mt-4">
           <button className="btn btn-secondary  bg-orange-500  hover:bg-orange-500 border-none text white">Post</button>
 
