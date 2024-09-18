@@ -173,7 +173,7 @@ function Onboarding() {
     ];
 
     return (
-        <div className='flex flex-grow w-full'>
+        <div className='flex flex-grow w-full bg-light'>
             <div className="w-1/2 p-8">
                 <div className='mb-4'>
                     <ul className="steps">
