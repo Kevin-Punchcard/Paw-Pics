@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";  // Use ES module import
 
 const config: Config = {
   content: [
@@ -16,10 +17,23 @@ const config: Config = {
       },
       fontSize: {
         megaXL: "4rem",
-        body: "1.125rem"
-      }
+        body: "1.125rem",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    daisyui, // Use ES module for DaisyUI
+  ],
+  daisyui: {
+    themes: false, // Choose your theme options as per your needs
+    darkTheme: "dark",
+    base: true,
+    styled: true,
+    utils: true,
+    prefix: "", // Customize the prefix if needed
+    logs: true,
+    themeRoot: ":root",
+  },
 };
+
 export default config;
