@@ -13,7 +13,13 @@ const config: Config = {
         background: "var(--background)",
         darkGreen:"#0D4736",
         beige: "#FCFAE1",
+        peach: "#FCB888",
+        mustard: "#EDB53E",
+        light: "#FFFEF3",
+        lightYellow: "#FFFCD6",
         foreground: "var(--foreground)",
+        grey: "#5B6575",
+        dark: "#093327"
       },
       fontSize: {
         megaXL: "4rem",
@@ -25,7 +31,6 @@ const config: Config = {
     daisyui, // Use ES module for DaisyUI
   ],
   daisyui: {
-    themes: false, // Choose your theme options as per your needs
     darkTheme: "dark",
     base: true,
     styled: true,
@@ -33,6 +38,19 @@ const config: Config = {
     prefix: "", // Customize the prefix if needed
     logs: true,
     themeRoot: ":root",
+    themes: [
+      {
+        mytheme: {
+          "primary": "#EDB53E",
+          'primary-content': '#093327',
+          "secondary": "#093327",
+          "tertiary": "#5B6575",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+          "base-100": "#ffffff",
+        },
+      },
+    ]
   },
 };
 
