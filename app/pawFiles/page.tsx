@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function PawFiles() {
     return (
         <div className='flex flex-row'>
-            <div className="drawer drawer-open">
+            <div className="drawer drawer-open -mt-4">
                 <div className="h-[90vh] bg-light">
                     <ul className="menu bg-light text-base-content w-70 p-4">
                         <li>

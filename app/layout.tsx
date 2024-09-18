@@ -23,7 +23,9 @@ export default function RootLayout({
       </head>
       <body className="bg-darkGreen min-h-screen">
         <Navbar />
-          {children}
+          <div className="pt-4">
+            {children}
+          </div>
       </body>
     </html>
   );
