@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import Image from 'next/image';
 
 
 function Onboarding() {
@@ -17,6 +18,7 @@ function Onboarding() {
             }
         ]
     });
+
     function nextStep() {
         if (currentStep === steps.length - 1) {
             return;
@@ -43,9 +45,8 @@ function Onboarding() {
                     bio: '',
                 }
             ]
-        })
+        });
     }
-
 
     function handleSubmit(e: React.ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -61,18 +62,12 @@ function Onboarding() {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        console.log('e.target', e.target)
-        console.log('name', name)
-        console.log('value', value)
         setUserData((prevData) => {
             if (name.startsWith('pet')) {
                 const field = name.substring(3).toLowerCase();
                 return {
                     ...prevData,
-                    pets: prevData.pets.map((pet) => {
-                        return ({ ...pet, [field]: value })
-                    }
-                    ),
+                    pets: prevData.pets.map((pet) => ({ ...pet, [field]: value })),
                 };
             }
 
@@ -104,31 +99,42 @@ function Onboarding() {
             )
         },
         {
-            title: 'Individual: About',
-            description: 'Step 2: Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            content: (
+            title: userData.userType === "Individual" ? 'Individual: About' : 'Shelter: About',
+            content: userData.userType === "Individual" ? (
                 <div className='mt-8 w-full'>
-
                     <div className="label">
                         <span className="label-text">Name</span>
                     </div>
                     <input name='name' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" onChange={handleInputChange} />
 
                     <div className="label">
-                        <span className="label-text">??</span>
+                        <span className="label-text">Description</span>
                     </div>
-                    <input name="??" type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" onChange={handleInputChange} />
+                    <textarea name='description' className="textarea textarea-bordered w-full max-w-xs" placeholder="Bio" onChange={handleInputChange}></textarea>
+                </div>
+            ) : (
+                <div className='mt-8 w-full'>
+                    <div className="label">
+                        <span className="label-text">Shelter Name</span>
+                    </div>
+                    <input name='name' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" onChange={handleInputChange} />
+
+                    <div className="label">
+                        <span className="label-text">Website</span>
+                    </div>
+                    <input name='name' type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" onChange={handleInputChange} />
 
                     <div className="label">
                         <span className="label-text">Description</span>
                     </div>
                     <textarea name='description' className="textarea textarea-bordered w-full max-w-xs" placeholder="Bio" onChange={handleInputChange}></textarea>
                 </div>
+                
             )
         },
         {
-            title: 'Individual: Pets',
-            description: 'Step 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            
+            title: userData.userType === "Individual" ? 'Individual: Pet' : 'Shelter: Pet',
             content: (
                 <div className='mt-8'>
                     {userData.pets.map((pet, index) => (
@@ -158,37 +164,47 @@ function Onboarding() {
                         </div>
                     ))
                     }
-
                     <div>
                         <button className="btn btn-primary w-24" onClick={addNewPets}>Add</button>
                     </div>
                 </div >
             )
         },
-    ]
-
+    ];
 
     return (
-        <div className='p-8'>
-            <div className='mb-4'>
-                <ul className="steps">
-                    <li className={`step ${currentStep >= 0 ? 'step-secondary' : ''}`}></li>
-                    <li className={`step ${currentStep >= 1 ? 'step-secondary' : ''}`}></li>
-                    <li className={`step ${currentStep >= 2 ? 'step-secondary' : ''}`}></li>
-                </ul>
-            </div>
-            <h1 className='text-4xl font-bold tk-roca text-dark'>{steps[currentStep].title}</h1>
-            <form onSubmit={handleSubmit}>
-                {steps[currentStep].content}
-                <div className='mt-4'>
-                    <button className="btn btn-outline btn-secondary w-24" onClick={prevStep}>Back</button>
-                    <button type="button" onClick={nextStep} className="btn btn-primary ml-2 w-24">
-                        Next
-                    </button>
+        <div className='flex flex-grow w-full bg-light'>
+            <div className="w-1/2 p-8">
+                <div className='mb-4'>
+                    <ul className="steps">
+                        <li className={`step ${currentStep >= 0 ? 'step-secondary' : ''}`}></li>
+                        <li className={`step ${currentStep >= 1 ? 'step-secondary' : ''}`}></li>
+                        <li className={`step ${currentStep >= 2 ? 'step-secondary' : ''}`}></li>
+                    </ul>
                 </div>
-            </form>
+                <h1 className='text-4xl font-bold text-dark'>{steps[currentStep].title}</h1>
+                <form onSubmit={handleSubmit}>
+                    {steps[currentStep].content}
+                    <div className='mt-4'>
+                        <button className="btn btn-outline btn-secondary w-24" onClick={prevStep}>Back</button>
+                        <button type="button" onClick={nextStep} className="btn btn-primary ml-2 w-24">
+                            Next
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div className="relative w-1/2 bg-onboarding">
+                <div className="absolute bottom-0 w-full">
+                    <Image
+                        src={"/images/cat-onboarding.png"}
+                        layout="responsive"
+                        width={100}
+                        height={100} alt="home-hero image"
+                    />
+                </div>
+            </div>
         </div>
     )
 }
 
-export default Onboarding
+export default Onboarding;

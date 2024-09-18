@@ -19,7 +19,8 @@ const config: Config = {
         lightYellow: "#FFFCD6",
         foreground: "var(--foreground)",
         grey: "#5B6575",
-        dark: "#093327"
+        dark: "#093327",
+        onboarding: "#F7DCA1",
       },
       fontSize: {
         megaXL: "4rem",

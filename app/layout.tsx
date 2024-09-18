@@ -21,11 +21,11 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-darkGreen min-h-screen">
+      <body className="bg-darkGreen min-h-screen flex flex-col">
         <Navbar />
-          <div className="pt-4">
-            {children}
-          </div>
+        <div className="flex flex-grow w-screen">
+          {children}
+        </div>
       </body>
     </html>
   );
