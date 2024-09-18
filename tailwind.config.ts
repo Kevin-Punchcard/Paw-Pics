@@ -13,6 +13,8 @@ const config: Config = {
         background: "var(--background)",
         darkGreen:"#0D4736",
         beige: "#FCFAE1",
+        peach: "#FCB888",
+        mustard: "#EDB53E",
         foreground: "var(--foreground)",
       },
       fontSize: {
