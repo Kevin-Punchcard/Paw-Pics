@@ -85,20 +85,19 @@ function Onboarding() {
 
     const steps = [
         {
-            title: 'Onboarding',
-            description: 'Step 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            title: 'What type of user are you?',
             content: (
                 <div className='w-10 mt-8'>
                     <div className="form-control">
                         <label className="label cursor-pointer">
-                            <input type="radio" name="userType" className="radio" value="Individual" checked={userData.userType === "Individual"} onChange={handleUserTypeChange} />
-                            <span className="label-text ml-2">Individual</span>
+                            <input type="radio" name="userType" className="radio checked:bg-grey border-grey" value="Individual" checked={userData.userType === "Individual"} onChange={handleUserTypeChange} />
+                            <span className="label-text ml-2  text-grey">Individual</span>
                         </label>
                     </div>
                     <div className="form-control">
-                        <label className="label cursor-pointer">
-                            <input type="radio" name="userType" className="radio" value="Shelter" checked={userData.userType === "Shelter"} onChange={handleUserTypeChange} />
-                            <span className="label-text ml-2">Shelter</span>
+                        <label className="label cursor-pointer ">
+                            <input type="radio" name="userType" className="radio checked:bg-grey border-grey" value="Shelter" checked={userData.userType === "Shelter"} onChange={handleUserTypeChange} />
+                            <span className="label-text ml-2  text-grey">Shelter</span>
                         </label>
                     </div>
                 </div>
@@ -173,26 +172,19 @@ function Onboarding() {
         <div className='p-8'>
             <div className='mb-4'>
                 <ul className="steps">
-                    <li className={`step ${currentStep >= 0 ? 'step-primary' : ''}`}></li>
-                    <li className={`step ${currentStep >= 1 ? 'step-primary' : ''}`}></li>
-                    <li className={`step ${currentStep >= 2 ? 'step-primary' : ''}`}></li>
+                    <li className={`step ${currentStep >= 0 ? 'step-secondary' : ''}`}></li>
+                    <li className={`step ${currentStep >= 1 ? 'step-secondary' : ''}`}></li>
+                    <li className={`step ${currentStep >= 2 ? 'step-secondary' : ''}`}></li>
                 </ul>
             </div>
-            <h1 className='text-4xl font-bold'>{steps[currentStep].title}</h1>
-            <p>{steps[currentStep].description}</p>
+            <h1 className='text-4xl font-bold tk-roca text-dark'>{steps[currentStep].title}</h1>
             <form onSubmit={handleSubmit}>
                 {steps[currentStep].content}
                 <div className='mt-4'>
-                    <button className="btn btn-secondary w-24" onClick={prevStep}>Back</button>
-                    {/* {currentStep < steps.length - 1 ? ( */}
+                    <button className="btn btn-outline btn-secondary w-24" onClick={prevStep}>Back</button>
                     <button type="button" onClick={nextStep} className="btn btn-primary ml-2 w-24">
                         Next
                     </button>
-                    {/* ) : (
-                        <button type="submit" className="btn btn-primary ml-2 w-24">
-                            Submit
-                        </button>
-                    )} */}
                 </div>
             </form>
         </div>

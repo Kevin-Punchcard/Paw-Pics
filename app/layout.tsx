@@ -20,7 +20,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
       </head>
-      <body className="min-h-screen bg-darkGreen">
+      <body className="min-h-screen bg-light">
         <Navbar />
         {children}
       </body>
