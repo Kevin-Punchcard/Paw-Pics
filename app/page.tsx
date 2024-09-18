@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-8 justify-center items-center">
+    <main className="flex flex-col gap-8 justify-center items-center bg-darkGreen">
       <div className="flex flex-col md:flex-row justify-between min-h-screen overflow-x-hidden">
         <div className="flex gap-4 flex-col justify-start w-1/2">
           <h1 className="tk-roca text-megaXL text-beige">Heading text</h1>

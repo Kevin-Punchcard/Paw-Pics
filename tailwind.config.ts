@@ -18,7 +18,8 @@ const config: Config = {
         foreground: "var(--foreground)",
         light: "#FFFEF3",
         grey: "#5B6575",
-        dark: "#093327"
+        dark: "#093327",
+        onboarding: "#F7DCA1",
       },
       fontSize: {
         megaXL: "4rem",
