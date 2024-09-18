@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image';
 
 export default function PawFiles() {
-    const [loggedIn, setLoggedIn] = useState(false);
-
     return (
         <div className='flex flex-row'>
             <div className="drawer drawer-open">
@@ -32,10 +30,6 @@ export default function PawFiles() {
                     </ul>
                 </div>
             </div>
-            <button className="btn btn-primary" onClick={() => setLoggedIn(!loggedIn)}>
-                {loggedIn ? 'Log Out' : 'Log In'}
-            </button>
-            {loggedIn ? <>You are logged in</> : <>You are now logged out</>}
         </div>
     )
 }
