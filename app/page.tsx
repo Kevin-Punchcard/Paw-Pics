@@ -1,14 +1,19 @@
 import Image from "next/image";
 
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-bgGreen">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <h1 className="tk-roca mega-xl text-fontColorPrimary">Heading text</h1>
-          <Image src={"/images/home-hero.svg"} height={400} width={400} alt="home-hero image"/>
+
+    <main className="flex flex-col gap-8  justify-center items-center bg-darkGreen min-h-screen overflow-x-hidden">
+      <div className="flex flex-col md:flex-row justify-between">
+        <div className="flex gap-4 flex-col justify-start w-1/2">
+          <h1 className="tk-roca text-megaXL text-beige">Heading text</h1>
+          <p className="text-body text-beige tk-sora">Join a community dedicated to showcasing the cutest, fluffiest, and most adorable dog paws around. Whether you're a dog lover or a proud pet parent, this is the perfect place to share and enjoy the paws of your furry friends!</p>
         </div>
-      </main>
-    </div>
+
+        <Image src={"/images/home-hero.svg"} height={600} width={600} alt="home-hero image" className="absolute right-[-0px] bottom-0"/>
+      </div>
+    </main>
+
   );
 }

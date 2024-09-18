@@ -10,12 +10,13 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        bgGreen: "var(--background-green)",
+        darkGreen:"#0D4736",
+        beige: "#FCFAE1",
         foreground: "var(--foreground)",
-        fontColorPrimary: "var(--font-color-primary)",
       },
       fontSize: {
-        "mega-xl": "25rem",
+        megaXL: "4rem",
+        body: "1.125rem"
       }
     },
   },
