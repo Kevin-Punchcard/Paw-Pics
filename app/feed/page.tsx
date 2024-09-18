@@ -1,7 +1,11 @@
+"use client";
+
 import Card from '@/components/Card';
-import React from 'react';
+import Modal from '@/components/Modal';
+import React, { useState } from 'react';
 
 export default function Feed() {
+
     const cards = [
         {
             title: "Grizz",
@@ -56,15 +60,21 @@ export default function Feed() {
     ];
 
     return (
-        <div className='flex flex-row gap-4 max-w-7xl flex-wrap justify-center'>
-            {cards.map((card, index) => (
-                <Card
-                    key={index}
-                    title={card.title}
-                    body={card.body}
-                    backgroundImage={card.backgroundImage} // Pass the background image URL
-                />
-            ))}
-        </div>
+
+        <>
+            {/* Button to open modal */}
+          
+
+            <div className='flex flex-row gap-4 max-w-7xl flex-wrap justify-center'>
+                {cards.map((card, index) => (
+                    <Card
+                        key={index}
+                        title={card.title}
+                        body={card.body}
+                        backgroundImage={card.backgroundImage} // Pass the background image URL
+                    />
+                ))}
+            </div>
+        </>
     );
 }
