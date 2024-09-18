@@ -5,18 +5,53 @@ export default function Feed() {
     const cards = [
         {
             title: "Grizz",
-            body: "♂️ Male • 2 years old",
-            backgroundImage: "/images/grizz-one.jpg",
+            body: "♂️ Male • 6 years old",
+            backgroundImage: "/images/paw-one.png",
         },
         {
             title: "Milo",
-            body: "This is body 2",
-            backgroundImage: "/images/home-hero.svg",
+            body: "♂️ Male • 2 years old",
+            backgroundImage: "/images/paw-two.png",
         },
         {
-            title: "Title 3",
-            body: "This is body 3",
-            backgroundImage: "/images/dog-three.jpg",
+            title: "Spike",
+            body: "♀️ Female • 4 years old",
+            backgroundImage: "/images/paw-three.png",
+        },
+        {
+            title: "Ratatouille",
+            body: "♂️ Male • 10 years old",
+            backgroundImage: "/images/paw-four.png",
+        },
+        {
+            title: "Ron",
+            body: "♂️ Male • 3 years old",
+            backgroundImage: "/images/paw-five.png",
+        },
+        {
+            title: "Jangles",
+            body: "♀️ Female • 8 years old",
+            backgroundImage: "/images/paw-six.png",
+        },
+        {
+            title: "Puppo",
+            body: "♂️ Male • 2 years old",
+            backgroundImage: "/images/paw-seven.png",
+        },
+        {
+            title: "Daisy",
+            body: "♂️ Male • 7 years old",
+            backgroundImage: "/images/paw-eight.png",
+        },
+        {
+            title: "Rex",
+            body: "♀️ Female • 1 year old",
+            backgroundImage: "/images/paw-nine.png",
+        },
+        {
+            title: "Snorlax",
+            body: "♂️ Male • 8 years old",
+            backgroundImage: "/images/paw-ten.png",
         },
     ];
 

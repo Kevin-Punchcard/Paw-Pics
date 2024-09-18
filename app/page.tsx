@@ -14,6 +14,5 @@ export default function Home() {
         <Image src={"/images/home-hero.svg"} height={600} width={600} alt="home-hero image" className="absolute right-[-0px] bottom-0"/>
       </div>
     </main>
-
   );
 }
